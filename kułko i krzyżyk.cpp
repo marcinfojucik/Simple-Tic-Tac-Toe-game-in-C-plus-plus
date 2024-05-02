@@ -19,7 +19,7 @@ void inboard (char board[3][3])
 		board[i][j] = '.';
 }
 
-//Wyœwietlanie planszy gry
+// Wyœwietlanie planszy gry
 void print(char board[3][3])
 {
 	for (int i = 0; i < 3; i++)
@@ -34,7 +34,7 @@ void print(char board[3][3])
 	cout << endl << endl;
 }
 
-//Mechanizm przebiegu trwaj¹cej gry
+// Mechanizm przebiegu trwaj¹cej gry
 char check(char board[3][3])
 {
 		if (board[0][0] != '.' && (board[0][0] == board[0][1] && board[0][0] == board[0][2] ||
@@ -105,7 +105,7 @@ int pickmove(char board[3][3], char player1, char player2)
 	return (10 * bestrow + bestcol);
 }
 
-//Wyœwietlanie poleceñ dla gracza
+// Wyœwietlanie poleceñ dla gracza
 void placement(char board[3][3], char player)
 {
 	while(1)
@@ -140,7 +140,7 @@ void placement(char board[3][3], char player)
 	}
 }
 
-//Inicjowanie znaków komputera
+// Inicjowanie znaków komputera
 char cpuchoice (char player1)
 {
 	char cpu;
@@ -170,7 +170,7 @@ char playerchoice (string s)
 	}
 }
 
-//Mechanika gry: rozpoczêcie gry, wyœwietlanie informacji o wyniku koñcowym gry Wygranej/Przegranej Gracza, Komputera lub remisu
+// Mechanika gry: rozpoczêcie gry, wyœwietlanie informacji o wyniku koñcowym gry Wygranej/Przegranej Gracza, Komputera lub remisu
 void play (char board[3][3], char player1, char cpu)
 {
 	int moves = 0;
