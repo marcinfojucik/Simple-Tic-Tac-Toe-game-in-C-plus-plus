@@ -11,7 +11,7 @@ struct node
 	char ai;
 };
 
-//Create the board game mechanic
+// Create the board game mechanic
 void inboard (char board[3][3])
 {
 	for (int i = 0; i < 3; i++)
@@ -19,7 +19,7 @@ void inboard (char board[3][3])
 		board[i][j] = '.';
 }
 
-//Display board game mechanic
+// Display board game mechanic
 void print(char board[3][3])
 {
 	for (int i = 0; i < 3; i++)
@@ -34,7 +34,7 @@ void print(char board[3][3])
 	cout << endl << endl;
 }
 
-//Ongoing game mechanic
+// Ongoing game mechanic
 char check(char board[3][3])
 {
 		if (board[0][0] != '.' && (board[0][0] == board[0][1] && board[0][0] == board[0][2] ||
@@ -81,7 +81,7 @@ int score(char board[3][3], char player1, char player2)
 		return --bestmove;
 }
 
-//Display score and next steps AI
+// Display score and next steps AI
 int pickmove(char board[3][3], char player1, char player2)
 {
 	int bestmove = -9999;
@@ -105,7 +105,7 @@ int pickmove(char board[3][3], char player1, char player2)
 	return (10 * bestrow + bestcol);
 }
 
-//Display plaryer commands
+//Display player commands
 void placement(char board[3][3], char player)
 {
 	while(1)
@@ -140,7 +140,7 @@ void placement(char board[3][3], char player)
 	}
 }
 
-//Inicjowanie znaków komputera Inictiation CPU markers
+// Inictiation CPU markers
 char aichoice (char player1)
 {
 	char ai;
@@ -152,7 +152,7 @@ char aichoice (char player1)
 	return ai;
 }
 
-// Inicjowanie znaków gracza Initiation Player markers
+// Initiation Player markers
 char playerchoice (string s)
 {
 	while(1)
@@ -170,7 +170,7 @@ char playerchoice (string s)
 	}
 }
 
-//Game Mechanic: Display information about Win/Lose or Draw
+// Game Mechanic: Display information about Win/Lose or Draw
 void play (char board[3][3], char player1, char ai)
 {
 	int moves = 0;
